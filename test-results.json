@@ -59,8 +59,8 @@
       "column": 0,
       "specs": [
         {
-          "title": "Should pull list of parishes in district",
-          "ok": false,
+          "title": "Verify token is good",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -71,28 +71,52 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "failed",
-                  "duration": 24,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "status": "passed",
+                  "duration": 160,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 33,
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "Should pull list of parishes in district",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 40,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "file": "tests/API_Tests.spec.js",
+          "line": 18,
           "column": 1
         },
         {
           "title": "Should pull highway numbers in district",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -102,29 +126,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "status": "failed",
-                  "duration": 17,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 82,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 47,
+          "line": 32,
           "column": 1
         },
         {
           "title": "Should pull control sections in district",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -134,29 +154,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "status": "failed",
-                  "duration": 19,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 95,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 55,
+          "line": 40,
           "column": 1
         },
         {
           "title": "Should pull cities in district",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -166,29 +182,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "status": "failed",
-                  "duration": 15,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 30,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 63,
+          "line": 48,
           "column": 1
         },
         {
           "title": "Should pull highway numbers in parish",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -198,29 +210,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 7,
-                  "status": "failed",
-                  "duration": 27,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 80,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 79,
+          "line": 64,
           "column": 1
         },
         {
           "title": "Should pull control sections in parish",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -230,29 +238,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "status": "failed",
-                  "duration": 20,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 89,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 87,
+          "line": 72,
           "column": 1
         },
         {
           "title": "Should pull cities in parish",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -262,29 +266,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "status": "failed",
-                  "duration": 18,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 27,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 96,
+          "line": 81,
           "column": 1
         },
         {
           "title": "Should pull highway numbers in city",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -294,29 +294,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 10,
-                  "status": "failed",
-                  "duration": 14,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 94,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 112,
+          "line": 97,
           "column": 1
         },
         {
           "title": "Should pull control sections in city",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -326,29 +322,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 11,
-                  "status": "failed",
-                  "duration": 18,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 90,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 120,
+          "line": 105,
           "column": 1
         },
         {
           "title": "Should pull highway numbers by type",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -358,29 +350,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 12,
-                  "status": "failed",
-                  "duration": 14,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 75,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 130,
+          "line": 115,
           "column": 1
         },
         {
           "title": "Should pull control sections by type",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -390,29 +378,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 13,
-                  "status": "failed",
-                  "duration": 13,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 97,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 139,
+          "line": 124,
           "column": 1
         },
         {
           "title": "Should pull control sections by highway number",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -422,29 +406,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 14,
-                  "status": "failed",
-                  "duration": 18,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 105,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 149,
+          "line": 134,
           "column": 1
         },
         {
           "title": "Should pull max log mile for control section",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -454,29 +434,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 15,
-                  "status": "failed",
-                  "duration": 18,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 76,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 159,
+          "line": 144,
           "column": 1
         },
         {
           "title": "Should pull min log mile for control section",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -486,29 +462,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 16,
-                  "status": "failed",
-                  "duration": 18,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 98,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 167,
+          "line": 152,
           "column": 1
         },
         {
           "title": "Pull crash data for hypothetical scenario",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -518,29 +490,53 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 17,
-                  "status": "failed",
-                  "duration": 19,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 857,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 176,
+          "line": 161,
+          "column": 1
+        },
+        {
+          "title": "Pull hypothetical summary report",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 103537,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "file": "tests/API_Tests.spec.js",
+          "line": 310,
           "column": 1
         },
         {
           "title": "Should pull list of severities",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -550,29 +546,25 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 18,
-                  "status": "failed",
-                  "duration": 19,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 20,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 416,
+          "line": 401,
           "column": 1
         },
         {
           "title": "Should pull list of lightings",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -582,24 +574,20 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 19,
-                  "status": "failed",
-                  "duration": 25,
-                  "error": {
-                    "message": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object",
-                    "stack": "apiRequest.newContext: extraHTTPHeaders[0].value: expected string, got object\n"
-                  },
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 17,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 426,
+          "line": 411,
           "column": 1
         },
         {
@@ -608,26 +596,26 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 18,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 436,
+          "line": 421,
           "column": 1
         },
         {
@@ -636,26 +624,26 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 41,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 446,
+          "line": 431,
           "column": 1
         },
         {
@@ -664,26 +652,26 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 16,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 456,
+          "line": 441,
           "column": 1
         },
         {
@@ -692,26 +680,26 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 24,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 466,
+          "line": 451,
           "column": 1
         },
         {
@@ -720,26 +708,26 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 15,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 476,
+          "line": 461,
           "column": 1
         },
         {
@@ -748,26 +736,26 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 478,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 484,
+          "line": 469,
           "column": 1
         },
         {
@@ -776,26 +764,26 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 15,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 497,
+          "line": 482,
           "column": 1
         },
         {
@@ -804,26 +792,26 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 16,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 508,
+          "line": 493,
           "column": 1
         },
         {
@@ -832,26 +820,26 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 17,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 522,
+          "line": 507,
           "column": 1
         },
         {
@@ -860,26 +848,26 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 14,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 536,
+          "line": 521,
           "column": 1
         },
         {
@@ -888,26 +876,26 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 16,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/API_Tests.spec.js",
-          "line": 544,
+          "line": 529,
           "column": 1
         }
       ]
@@ -932,7 +920,7 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 12307,
+                  "duration": 11149,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
@@ -959,24 +947,15 @@
               "results": [
                 {
                   "workerIndex": 1,
-                  "status": "skipped",
-                  "duration": 2798,
-                  "error": {
-                    "message": "locator.click: Target closed\n=========================== logs ===========================\nwaiting for selector \"text=Date Range\"\n  selector resolved to visible <button mdbripple=\"\" type=\"button\" ripplecolor=\"dark\" _n…>Date Range</button>\nattempting click action\n  waiting for element to be visible, enabled and stable\n============================================================",
-                    "stack": "locator.click: Target closed\n=========================== logs ===========================\nwaiting for selector \"text=Date Range\"\n  selector resolved to visible <button mdbripple=\"\" type=\"button\" ripplecolor=\"dark\" _n…>Date Range</button>\nattempting click action\n  waiting for element to be visible, enabled and stable\n============================================================\n    at C:\\Users\\cflurr1\\Documents\\Learning Playwright\\tests\\Generate_Report.spec.js:101:41"
-                  },
+                  "status": "passed",
+                  "duration": 9842,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "C:\\Users\\cflurr1\\Documents\\Learning Playwright\\tests\\Generate_Report.spec.js",
-                    "column": 41,
-                    "line": 101
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/Generate_Report.spec.js",
@@ -1005,7 +984,7 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 14659,
+                  "duration": 13702,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
@@ -1032,24 +1011,15 @@
               "results": [
                 {
                   "workerIndex": 2,
-                  "status": "skipped",
-                  "duration": 441,
-                  "error": {
-                    "message": "page.goto: Navigation failed because page was closed!\n=========================== logs ===========================\nnavigating to \"https://crashquerytoolpreprod.lsu.edu/main/crash\", waiting until \"load\"\n============================================================",
-                    "stack": "page.goto: Navigation failed because page was closed!\n=========================== logs ===========================\nnavigating to \"https://crashquerytoolpreprod.lsu.edu/main/crash\", waiting until \"load\"\n============================================================\n    at C:\\Users\\cflurr1\\Documents\\Learning Playwright\\tests\\Project_Tests.spec.js:102:14"
-                  },
+                  "status": "passed",
+                  "duration": 5765,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "C:\\Users\\cflurr1\\Documents\\Learning Playwright\\tests\\Project_Tests.spec.js",
-                    "column": 14,
-                    "line": 102
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/Project_Tests.spec.js",
@@ -1062,22 +1032,22 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 4088,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/Project_Tests.spec.js",
@@ -1106,7 +1076,7 @@
                 {
                   "workerIndex": 3,
                   "status": "passed",
-                  "duration": 11591,
+                  "duration": 10550,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
@@ -1133,24 +1103,15 @@
               "results": [
                 {
                   "workerIndex": 3,
-                  "status": "skipped",
-                  "duration": 3543,
-                  "error": {
-                    "message": "locator.click: Target closed\n=========================== logs ===========================\nwaiting for selector \"input[role=\"combobox\"] >> nth=1\"\n  selector resolved to visible <input type=\"text\" tabindex=\"0\" role=\"combobox\" autocom…/>\nattempting click action\n  waiting for element to be visible, enabled and stable\n============================================================",
-                    "stack": "locator.click: Target closed\n=========================== logs ===========================\nwaiting for selector \"input[role=\"combobox\"] >> nth=1\"\n  selector resolved to visible <input type=\"text\" tabindex=\"0\" role=\"combobox\" autocom…/>\nattempting click action\n  waiting for element to be visible, enabled and stable\n============================================================\n    at C:\\Users\\cflurr1\\Documents\\Learning Playwright\\tests\\UI_Test_cases.spec.js:152:55"
-                  },
+                  "status": "passed",
+                  "duration": 9385,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "C:\\Users\\cflurr1\\Documents\\Learning Playwright\\tests\\UI_Test_cases.spec.js",
-                    "column": 55,
-                    "line": 152
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/UI_Test_cases.spec.js",
@@ -1163,22 +1124,22 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 7393,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/UI_Test_cases.spec.js",
@@ -1191,22 +1152,22 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 150000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 7234,
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "file": "tests/UI_Test_cases.spec.js",

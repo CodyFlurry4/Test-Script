@@ -1,33 +1,18 @@
 const { test, expect, request } = require("@playwright/test");
-const { chromium } = require("playwright");
-
-const getToken = async () => {
-  const browser = await chromium.launch();
-  const context = await browser.newContext({ storageState: "auth.json" });
-  const page = await context.newPage();
-  page.on("request", async (response) => {
-    if (response.url().includes("GetDistricts")) {
-      headers = await response.allHeaders();
-      auth = headers["authorization"];
-      console.log(auth);
-      return auth;
-    }
-  });
-  await page.goto("https://crashquerytoolpreprod.lsu.edu/main/crash");
-  page.locator("text=Accept").click();
-  await page.waitForTimeout(1000);
-  await browser.close();
-};
-
-auth = Promise.all(getToken());
-console.log(auth);
-
 test.use({
   extraHTTPHeaders: {
-    Authorization: auth,
+    Authorization:
+      "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5NEY1QTYwOTM2REY2QkEwNEI0REQ2OEQzRUQ3NEQzIiwidHlwIjoiSldUIn0.eyJpc3MiOiJodHRwczovL2NhcnRzYXV0aGVudGljYXRpb25wcmVwcm9kLmxzdS5lZHUiLCJuYmYiOjE2NTU0OTQ2MTcsImlhdCI6MTY1NTQ5NDYxNywiZXhwIjoxNjU1NTMwNjE3LCJhdWQiOiJDcmFzaFF1ZXJ5VG9vbCIsImFtciI6WyJtZmEiXSwibm9uY2UiOiJjMjQzNGYzYmUyMjQ0ODdlODJjNTc5MjlkOTkxM2VhYSIsImF0X2hhc2giOiJ1eVl1aFpaMXl5SHUzR01JU1F2SWVnIiwic2lkIjoiMjVCOTRDMUIzQTk4Njk5MzExM0I5QTU2MUNEMDE1MUQiLCJzdWIiOiJiZDllNDRkZC1kNDMwLTQ2OWQtODUwNC1hODAzNmY1OTcxMGEiLCJhdXRoX3RpbWUiOjE2NTU0OTQ2MTYsImlkcCI6IkNBUlRTIiwiZW1haWwiOiJjZmx1cnIxQGxzdS5lZHUiLCJnaXZlbl9uYW1lIjoiQ29keSIsImZhbWlseV9uYW1lIjoiRmx1cnJ5IiwibmFtZSI6IkNvZHkgRmx1cnJ5Iiwicm9sZSI6WyJSZWRhY3RlZFBERlZpZXdlciIsIkNyYXNoUXVlcnlUb29sUHJlUHJvZFVzZXJzIl0sInBlcm1pc3Npb24iOiJDUVRQcmVQcm9kLlZpZXciLCJ1c2VybmFtZSI6IkNmbHVycjEiLCJvcmdhbml6YXRpb24iOiJDQVJUUyJ9.elvz3Z6bnKL7AESFHvZxK318MufWbOVyf3AuOrHQjplhOmD6YGtp__1ChjxIYneQ7-XAJX_UTAO5mPR0fE1ox2fjP5JNpsGZ8C5gQbCgzX1hoDsZc9MwOdoGUmVxwGK0K3rrA48rk8iZIPsKcEwcMzvfUsdqGrLWNXVMlBAAzQOxFtjRoy-xx0AQyYsukrD2psfzHgbnle2IVD8bkcZQrMa5zFSwo-PHE_HLPtX3EtqERuLTg-etVf3e7QOBibyX-h2qejX4zEw5hT1q7yZjAr46EDTiINcqGvG-19Gwf7vKK3vlJq09Y5ph3mOa_G6ek9OFAyxF8ZHpbz9ZXYdM1A",
   },
 });
 
+test("Verify token is good", async ({ request }) => {
+  const districtCode = "02";
+  const parishes = await request.get(
+    `CrashQueryToolService/api/ECrash/GetParishesByDistrict/${districtCode}`
+  );
+  expect(parishes.status()).toBe(200);
+});
 //DISTRICT
 //Pull list of parishes in district
 test("Should pull list of parishes in district", async ({ request }) => {
@@ -322,96 +307,96 @@ test("Pull crash data for hypothetical scenario", async ({ request }) => {
   });
 });
 
-// test("Pull hypothetical summary report", async ({ request }) => {
-//   const crashSummary = await request.post(
-//     `CrashQueryToolService/api/Project/GetSummaryReport`,
-//     {
-//       data: {
-//         contributingPrimaryFactorCode: [],
-//         dayofWeek: [],
-//         functionClass: [],
-//         highwayClass: [],
-//         hourSort: [],
-//         lightingCode: [],
-//         line: [],
-//         locationTypeCode: [],
-//         mannerCollisionCode: [],
-//         monthSort: [],
-//         primaryDirection: [],
-//         roadwayConditionCode: [],
-//         roadwayRelationCode: [],
-//         roadwayTypeCode: [],
-//         secondaryContributingFactorCode: [],
-//         severityCode: [],
-//         surfaceConditionCode: [],
-//         surfaceTypeCode: [],
-//         weatherCode: [],
-//         year: [],
-//         userParishes: [],
-//         alcohol: null,
-//         bicycle: null,
-//         cmv: null,
-//         constructionMaintenanceZone: null,
-//         distracted: null,
-//         hitAndRun: null,
-//         inattentive: null,
-//         infrastructure: null,
-//         intersection: null,
-//         laneDeparture: null,
-//         noRestraint: null,
-//         olderDriver: null,
-//         pedestrian: null,
-//         predictedAlcohol: null,
-//         publicPropertyDamage: null,
-//         railRoadTrainInvolved: null,
-//         roadwayDeparture: null,
-//         workZone: null,
-//         youngDriver: null,
-//         crashTime: null,
-//         investigatingAgencyCode: null,
-//         accessControlCode: null,
-//         intersectingRoadName: null,
-//         primaryRoadName: null,
-//         startDate: "01/01/2022",
-//         endDate: "12/31/2022",
-//         cityCode: 33,
-//         controlSection: null,
-//         district: null,
-//         primaryHighwayNumber: 112,
-//         highwayTypeCode: "102",
-//         logmileFrom: null,
-//         logmileTo: null,
-//         milepointFrom: null,
-//         milepointTo: null,
-//         milepostFrom: null,
-//         milepostTo: null,
-//         parishCode: "06",
-//         troop: null,
-//         username: "Cflurr1",
-//         projectID: 0,
-//         userDistrict: "",
-//         summaryBy: "Alcohol",
-//       },
-//       timeout: 0,
-//     }
-//   );
-//   expect(await crashSummary.json()).toContainEqual({
-//     summaryColumn: "False",
-//     totalAccidents: 4,
-//     fatalAccidents: 0,
-//     pdoAccidents: 3,
-//     fatalInjuries: 0,
-//     injuryAccidents: 1,
-//     severeInjuries: 0,
-//     moderateInjuries: 0,
-//     complaintInjuries: 3,
-//     notInjured: 6,
-//     unknownInjuries: 6,
-//     totalOccupants: 0,
-//     pedestriansKilled: 0,
-//     pedestriansInjured: 0,
-//   });
-// });
+test("Pull hypothetical summary report", async ({ request }) => {
+  const crashSummary = await request.post(
+    `CrashQueryToolService/api/Project/GetSummaryReport`,
+    {
+      data: {
+        contributingPrimaryFactorCode: [],
+        dayofWeek: [],
+        functionClass: [],
+        highwayClass: [],
+        hourSort: [],
+        lightingCode: [],
+        line: [],
+        locationTypeCode: [],
+        mannerCollisionCode: [],
+        monthSort: [],
+        primaryDirection: [],
+        roadwayConditionCode: [],
+        roadwayRelationCode: [],
+        roadwayTypeCode: [],
+        secondaryContributingFactorCode: [],
+        severityCode: [],
+        surfaceConditionCode: [],
+        surfaceTypeCode: [],
+        weatherCode: [],
+        year: [],
+        userParishes: [],
+        alcohol: null,
+        bicycle: null,
+        cmv: null,
+        constructionMaintenanceZone: null,
+        distracted: null,
+        hitAndRun: null,
+        inattentive: null,
+        infrastructure: null,
+        intersection: null,
+        laneDeparture: null,
+        noRestraint: null,
+        olderDriver: null,
+        pedestrian: null,
+        predictedAlcohol: null,
+        publicPropertyDamage: null,
+        railRoadTrainInvolved: null,
+        roadwayDeparture: null,
+        workZone: null,
+        youngDriver: null,
+        crashTime: null,
+        investigatingAgencyCode: null,
+        accessControlCode: null,
+        intersectingRoadName: null,
+        primaryRoadName: null,
+        startDate: "01/01/2022",
+        endDate: "12/31/2022",
+        cityCode: 33,
+        controlSection: null,
+        district: null,
+        primaryHighwayNumber: 112,
+        highwayTypeCode: "102",
+        logmileFrom: null,
+        logmileTo: null,
+        milepointFrom: null,
+        milepointTo: null,
+        milepostFrom: null,
+        milepostTo: null,
+        parishCode: "06",
+        troop: null,
+        username: "Cflurr1",
+        projectID: 0,
+        userDistrict: "",
+        summaryBy: "Alcohol",
+      },
+      timeout: 0,
+    }
+  );
+  expect(await crashSummary.json()).toContainEqual({
+    summaryColumn: "False",
+    totalAccidents: 4,
+    fatalAccidents: 0,
+    pdoAccidents: 3,
+    fatalInjuries: 0,
+    injuryAccidents: 1,
+    severeInjuries: 0,
+    moderateInjuries: 0,
+    complaintInjuries: 3,
+    notInjured: 6,
+    unknownInjuries: 6,
+    totalOccupants: 0,
+    pedestriansKilled: 0,
+    pedestriansInjured: 0,
+  });
+});
 
 test("Should pull list of severities", async ({ request }) => {
   const severities = await request.get(
